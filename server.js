@@ -14,13 +14,9 @@ const { validateSignup, validateLogin } = require('./middlewares/validateInputs'
 
 const app = express();
 
-const corsOptions = {
-    origin: 'medicare-dwhnabgthfe9ayce.canadacentral-01.azurewebsites.net',
-    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-    credentials: true // Enable if you need to send cookies or authorization headers
-};
+
 // Middleware cơ bản
-app.use(cors(corsOptions));
+app.use(cors());
 app.use(bodyParser.json());
 
 // Logging request (nếu cần kiểm tra)
